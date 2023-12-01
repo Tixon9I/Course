@@ -254,7 +254,13 @@ public class OrderForm extends Application
                         ordersList.add(order);
                         clientsList.add(client);
                         accidentsList.add(accident);
-                        System.out.println("\nВаше замовлення зареєстровано, оброблюється майстрем.");
+
+                        // Виклик Alert для виведення повідомлення
+                        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                        alert.setTitle("Інформація");
+                        alert.setHeaderText("Замовлення зареєстровано");
+                        alert.setContentText("Ваше замовлення зареєстровано, оброблюється майстрем.");
+                        alert.showAndWait();
 
                         // Закриття вікна
                         primaryStage.close();

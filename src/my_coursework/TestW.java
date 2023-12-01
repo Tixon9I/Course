@@ -59,8 +59,9 @@ public class TestW extends Application {
             // Перевірка, чи було пояснення програми
             if (!programExplained) {
                 System.out.println("\nЛаскаво просимо! Оберіть опцію:");
-                System.out.println("1. Ознайомтесь з кроками роботи програми");
-                System.out.println("0. Вихід з програми");
+                System.out.println("1. Ознайомтесь з можливостями програми");
+                System.out.println("0. Вихід з програми\n");
+                System.out.print("Введіть знак опції: ");
 
                 // Отримання вводу користувача
                 String userInput = scanner.next();
@@ -92,7 +93,8 @@ public class TestW extends Application {
                 System.out.println("Оберіть опцію:");
                 System.out.println("1. Клієнт");
                 System.out.println("2. Адміністратор");
-                System.out.println("0. Вихід з програми");
+                System.out.println("0. Вихід з програми\n");
+                System.out.print("Введіть знак опції: ");
 
                 // Отримання вводу користувача
                 String userInput = scanner.next();
@@ -196,9 +198,10 @@ public class TestW extends Application {
             // Виведення опцій меню для клієнта
             System.out.println("Для клієнта:");
             System.out.println("1. Оформити замовлення");
-            System.out.println("2. Перевірка чи виконано замовлення");
+            System.out.println("2. Перевірка стану замовлення");
             System.out.println("3. Повернутись до головного меню");
-            System.out.println("0. Вихід з програми");
+            System.out.println("0. Вихід з програми\n");
+            System.out.print("Введіть знак опції: ");
 
             try {
                 // Зчитування вибору клієнта
@@ -213,7 +216,6 @@ public class TestW extends Application {
                         boolean changeOption = true;
                         Changeoption = changeOption;
                         Platform.runLater(() -> showOrderForm());
-                        backToMain = true;
                         break;
                     case 2:
                         // Виклик методу для перевірки статусу замовлення
@@ -226,7 +228,7 @@ public class TestW extends Application {
 
                         // Перевірка наявності замовлень для введеного ПІБ клієнта
                         if (!ordersByClientFullName.isEmpty()) {
-                            // Отримання першого замовлення (можливо, потрібно додаткові перевірки)
+                            // Отримання першого замовлення
                             Order orderToUpdate = ordersByClientFullName.get(0);
 
                             // Встановлення значення стану аварії на true
@@ -250,6 +252,7 @@ public class TestW extends Application {
                         System.out.println("Невірний вибір опції. Будь ласка, виберіть знову.");
                         break;
                 }
+
             } catch (InputMismatchException e) {
                 System.out.println("Некоректний ввід. Будь ласка, введіть ціле число.");
                 scanner.nextLine(); // Очищення буфера введення
@@ -275,7 +278,8 @@ public class TestW extends Application {
             System.out.println("6. Заробіток майстрів з... по...");
             System.out.println("7. Кількість бригад");
             System.out.println("8. Повернутись до головного меню");
-            System.out.println("0. Вихід з програми");
+            System.out.println("0. Вихід з програми\n");
+            System.out.print("Введіть знак опції: ");
 
             try {
                 // Зчитування вибору користувача
@@ -489,7 +493,7 @@ public class TestW extends Application {
         clientsList = clients;
         accidentsList = accidents;
         // Ініціалізуємо дати
-        startDate = LocalDate.of(2005, 1, 1);
-        endDate = LocalDate.of(2005, 10, 12);
+        startDate = LocalDate.of(2023, 1, 1);
+        endDate = LocalDate.of(2023, 10, 12);
     }
 }

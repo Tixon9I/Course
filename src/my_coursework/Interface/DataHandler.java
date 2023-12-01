@@ -13,6 +13,7 @@ interface DataHandler
     void saveMastersToFile(List<Master> masters, String filename);
 
     void saveAccidentsToFile(List<Accident> accidents, String filename);
+
     void saveClientsToFile(List<Client> clients, String filename);
 
     // Метод для завантаження даних
@@ -21,5 +22,6 @@ interface DataHandler
     List<Master> loadMastersFromFile(String filename);
 
     List<Accident> loadAccidentsFromFile(String filename);
+
     List<Client> loadClientsFromFile(String filename);
 }

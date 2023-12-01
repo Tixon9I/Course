@@ -14,7 +14,7 @@ public class DataInitializer
 {
     public static void initializeAndSaveData() {
         // Створюємо об'єкти майстрів
-        Master master1 = new Master(new Composition("Іванов", "Антон", "Сегійович"),
+        Master master1 = new Master(new Composition("Іванов", "Антон", "Сергійович"),
                 new Composition("Сидир", "2в"), new Composition(50, 2040333), 1, 5);
 
         Master master2 = new Master(new Composition("Адруанов", "Сергій", "Петрович"),
@@ -59,9 +59,9 @@ public class DataInitializer
         accidents.add(accident3);
 
         // Створюємо замовлення
-        Order order1 = Order.createOrder(client1, master1, accident1, LocalDate.of(2005, 10, 14));
-        Order order2 = Order.createOrder(client2, master2, accident2, LocalDate.of(2005, 1, 11));
-        Order order3 = Order.createOrder(client3, master3, accident3, LocalDate.of(2005, 10, 10));
+        Order order1 = Order.createOrder(client1, master1, accident1, LocalDate.of(2023, 5, 25));
+        Order order2 = Order.createOrder(client2, master2, accident2, LocalDate.of(2023, 1, 11));
+        Order order3 = Order.createOrder(client3, master3, accident3, LocalDate.of(2023, 10, 10));
 
         // Створюємо список замовлень
         List<Order> orders = new ArrayList<>();

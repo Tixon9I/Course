@@ -11,7 +11,7 @@ import java.util.*;
 public class Accident implements Serializable
 {
     private Composition Address;  // Адреса
-    private boolean stateAccident; // Стан аварії буде реалізовано пізніше
+    private boolean stateAccident; // Стан аварії
     private LocalDate Date;  // Дата
     private String typeAccident; // Тип аварії
     private int costOfElimination; //Вартість усунення
