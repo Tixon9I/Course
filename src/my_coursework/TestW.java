@@ -228,14 +228,12 @@ public class TestW extends Application {
 
                         // Перевірка наявності замовлень для введеного ПІБ клієнта
                         if (!ordersByClientFullName.isEmpty()) {
-                            // Отримання першого замовлення
-                            Order orderToUpdate = ordersByClientFullName.get(0);
-
-                            // Встановлення значення стану аварії на true
-                            orderToUpdate.setStateAccident(true);
-
-                            // Виведення повідомлення про стан замовлення
-                            System.out.println("Стан замовлення: Виконано" + "\n");
+                            // Виведення інформації про кожне замовлення клієнта
+                            System.out.println("\nСтан замовлень для клієнта " + clientFullNameInput + ":");
+                            for (Order order : ordersByClientFullName) {
+                                order.printInfo();  // Виклик методу для виведення інформації про замовлення
+                                System.out.println("Стан замовлення: Виконано\n");
+                            }
                         } else {
                             System.out.println("Замовлення для введеного ПІБ клієнта не знайдено" + "\n");
                         }
@@ -330,7 +328,7 @@ public class TestW extends Application {
                         LocalDate endDate1 = null;
                         boolean invalidInputEndDate = false;
 
-                        while (endDate1 == null) {
+                        while (endDate1 == null || endDate1.isBefore(startDate1)) {
                             // Обробка введення кінцевої дати
                             if (invalidInputEndDate) {
                                 System.out.println("Некоректний ввід. Будь ласка, введіть дату.");
@@ -357,6 +355,7 @@ public class TestW extends Application {
                         int countAccidents = controller.countAccidentsInDateRange(startDate1, endDate1);
                         System.out.printf("\nКількість аварій з %s по %s: %s %n", startDate1, endDate1, countAccidents);
                         break;
+
                     case 4:
                         // Виклик методу для отримання середньої вартості усунення аварій
                         double avgEliminationCost = controller.calculateAverageEliminationCost();  // Середня вартість усунення аварії

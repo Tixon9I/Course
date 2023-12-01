@@ -13,10 +13,10 @@ import java.util.List;
 public class DataManager
 {
     // Шляхи до файлів для зберігання даних
-    private static final String MASTERS_FILE = "C:\\Users\\Home\\IdeaProjects\\Study_\\src\\my_coursework\\Files\\masters.dat";
-    private static final String CLIENTS_FILE = "C:\\Users\\Home\\IdeaProjects\\Study_\\src\\my_coursework\\Files\\clients.dat";
-    private static final String ACCIDENTS_FILE = "C:\\Users\\Home\\IdeaProjects\\Study_\\src\\my_coursework\\Files\\accidents.dat";
-    private static final String ORDERS_FILE = "C:\\Users\\Home\\IdeaProjects\\Study_\\src\\my_coursework\\Files\\orders.dat";
+    private static final String MASTERS_FILE = "C:\\Users\\Home\\IdeaProjects\\Course\\src\\my_coursework\\Files\\masters.dat";
+    private static final String CLIENTS_FILE = "C:\\Users\\Home\\IdeaProjects\\Course\\src\\my_coursework\\Files\\clients.dat";
+    private static final String ACCIDENTS_FILE = "C:\\Users\\Home\\IdeaProjects\\Course\\src\\my_coursework\\Files\\accidents.dat";
+    private static final String ORDERS_FILE = "C:\\Users\\Home\\IdeaProjects\\Course\\src\\my_coursework\\Files\\orders.dat";
 
     // Об'єкт для обробки даних (збереження та завантаження)
     private DataHandler dataHandler;
