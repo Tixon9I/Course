@@ -188,8 +188,7 @@ public class GUIAdmin extends Application {
 
     // Метод для відображення інформації про обрану категорію
     private void displayInformation(String category) {
-        // Тут ви можете вставити код для відображення інформації про обрану категорію
-        displayArea.setText("Інформація про " + category + " буде відображена тут.");
+        // код для відображення інформації про обрану категорію
         switch (category) {
             case "Клієнти":
                 displayClientsList(clientsList);
